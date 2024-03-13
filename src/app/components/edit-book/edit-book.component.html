@@ -1,0 +1,35 @@
+
+<div *ngIf="book">
+<h2>{{book.title}}</h2>
+<img src="{{book.cover}}" width="400px" height="450px">
+<h3>Author: <i>{{book.author}}</i></h3>
+<h3>Year of publication: {{book.year}} | Number of pages: {{book.pages}}</h3>
+<h3>Description: {{book.description}}</h3>
+<>
+<div>
+    <h3>Title:</h3>
+    <input [(ngModel)]="book.title" placeholder="Title"/>
+    </div>
+    <div>
+<h3>Author:</h3>
+<input [(ngModel)]="book.author" placeholder="Author"/>
+</div>
+<div>
+
+    <h3>Cover:</h3>
+    <input [(ngModel)]="book.cover" placeholder="Cover"/>
+    </div>
+<div>
+<h3>Year of publication: | Number of pages:</h3>
+
+<p><input [(ngModel)]="book.year" placeholder="Year"/>|<input [(ngModel)]="book.pages" placeholder="Pages"/></p>
+</div>
+<div>
+<h3>Description: </h3>
+<input [(ngModel)]="book.description" placeholder="Description"/>
+</div>
+<button (click)="UpdateBook(book)" *ngIf="book.id"> Save</button> &nbsp;
+<button (click)="DeleteBook(book)" *ngIf="book.id"> Delete</button>
+<button (click)="CreateBook(book)" *ngIf="!book.id"> Create</button>
+
+</div>
