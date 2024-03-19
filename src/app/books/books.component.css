@@ -1,0 +1,91 @@
+h2{
+    color: rgb(183, 122, 188);
+    text-align: center;
+   font-size:xx-large;
+}
+
+button{
+    background-color:#FFD3BE;
+    border-style: none;
+    font-size: medium;
+    font-style: oblique;
+    border-radius: 5%;
+    font-size: 16px;
+}
+
+.edit{
+    background-color: #FE8A7F;
+    color: black;
+}
+.create{
+    background-color: #C1554E;
+    color: white;
+}
+.float-container {
+    
+    display: inline-block;
+    width: 100%;
+    align-content: center;
+    margin-left: 7%;
+    
+}
+
+.float-child {
+width: 30%;
+float: left;
+
+}
+
+
+img{
+    width: 200px;
+    height: 250px;
+}
+
+
+.text {
+ 
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+.cover{
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+     
+}
+
+@media only screen and (min-width: 800px) {
+    .text {
+   font-size: 12px;
+    }
+  }
+
+  /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }

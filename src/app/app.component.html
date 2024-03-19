@@ -1,26 +1,21 @@
-<head><link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></head>
-<body>
-  <h2>{{title}}</h2>
-<table><thead>
-    <th></th>
-    <th></th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let book of books">
-      <td><img src ="{{book.cover }}" width="400px" height="450px"></td>
-      
-        <td>
-      Title:<i>{{book.title }}</i><br>
-      Author: <i>{{book.author }}</i><br>
-      Year:{{book.year }}| Pages:{{book.pages }} <br>
-      Resume: <i>{{ book.description }}</i><br>
-      <br>
-      <br>
-      <button (click)="editBook(book)">Edit</button></td>
-    </tr>
-  </tbody></table>
-  <button (click)="initNewBook()">  Add A New Book</button>
-<app-edit-book [book]="bookToEdit" (booksUpdated)="UpdateBookList($event)"></app-edit-book>
-</body>
+<nav>
+  <div class="wrapper">
+    <div class="logo"><a href="#" class="princess-sofia-regular">MYLibrary</a></div>
+    <input type="radio" name="slider" id="menu-btn"/>
+    <input type="radio" name="slider" id="close-btn"/>
+    <ul class="nav-links ">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <li><a class="indie-flower-regular" routerLink="">Home</a></li>
+      <li><a class="indie-flower-regular" routerLink="create">Add Book</a></li>
+  
+
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+<main id="main" class="flexbox-col">
+  <br>
+  <br>
+  <br>
+</main>
+<router-outlet></router-outlet>

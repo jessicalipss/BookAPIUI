@@ -1,0 +1,37 @@
+<div class="row float-container mt-10">
+  <div class="col-md-6 float-child indie-flower-regular">
+
+    <div class="wrapper">
+      <div class="book">
+        <div class="inner-book">
+          <div class="img" style="padding-top: calc(1.07 * 100%)">
+            <img src="{{ book.cover }}" />
+          </div>
+          <div class="page"></div>
+          <div class="page page-2"></div>
+          <div class="page page-3"></div>
+          <div class="page page-4"></div>
+          <div class="page page-5"></div>
+          <div class="img final-page" style="padding-top: calc(1.07 * 100%)">
+            <img src="./assets/img/side.jpg" />
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+  <div class="col-md-6 float-child1 indie-flower-regular">
+    <h2>{{ book.title }}</h2>
+    <h3>
+      Author: <i>{{ book.author }}</i>
+    </h3>
+    <h3>
+      Year of publication: {{ book.year }} | Number of pages:
+      {{ book.pages }}
+    </h3>
+    <h3>Description: {{ book.description }}</h3>
+    <br />
+    <a href="http://localhost:4200/">
+      <button type="button" class="btn btn-secondary">Back</button></a
+    >
+  </div>
+</div>

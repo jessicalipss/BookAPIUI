@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+       background-color: rgb(248, 244, 239);
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+     
+}

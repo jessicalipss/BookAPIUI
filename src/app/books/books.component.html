@@ -1,0 +1,47 @@
+
+    <div class="text-center">
+      
+    </div>
+    <div class="row float-container pb-5 pt-5 pr-0 ">
+      <div *ngFor="let book of books | paginate
+      : {
+          itemsPerPage: itemsPerPage,
+          currentPage: page,
+          totalItems: totalItems
+        }">
+        <div class="col-md-4 float-child pb-5 pr-0">
+       
+            <img class="cover" src="{{ book.cover }}" />
+           <div class="pt-2 text">
+            <br />
+            Title:<i>{{ book.title }}</i
+            ><br />
+            Author: <i>{{ book.author }}</i
+            ><br />
+            Year:{{ book.year }}  | Pages:{{ book.pages }} <br />
+  
+            <br />
+            <a  routerLink="/ebitbook/{{book.id}}">
+              <button class="edit">Edit</button> </a
+            >&nbsp;
+            <a routerLink="/book/{{book.id}}">
+              <button>View More</button>
+            </a>
+          </div>
+          </div>
+          
+  
+          </div>
+          
+      </div>
+      <pagination-controls
+      class="pagi"
+      (pageChange)="gty((page = $event))"
+      previousLabel="Prev"
+      nextLabel="Next"
+      (pageBoundsCorrection)="gty((page = $event))"
+   
+    ></pagination-controls>
+  
+
+  

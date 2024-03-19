@@ -1,35 +1,93 @@
-
-<div *ngIf="book">
-<h2>{{book.title}}</h2>
-<img src="{{book.cover}}" width="400px" height="450px">
-<h3>Author: <i>{{book.author}}</i></h3>
-<h3>Year of publication: {{book.year}} | Number of pages: {{book.pages}}</h3>
-<h3>Description: {{book.description}}</h3>
-<>
-<div>
-    <h3>Title:</h3>
-    <input [(ngModel)]="book.title" placeholder="Title"/>
+<br>
+<div class="row float-container">
+  <div *ngIf="book">
+    <div class="col-md-6 float-child1 indie-flower-regular">
+      <h2>{{ book.title }}</h2>
+      <img src="{{ book.cover }}" />
+      <h3>
+        Author: <i>{{ book.author }}</i>
+      </h3>
+      <h3>
+        Year of publication: {{ book.year }} | Number of pages:
+        {{ book.pages }}
+      </h3>
+      <h3>Description: {{ book.description }}</h3>
     </div>
-    <div>
-<h3>Author:</h3>
-<input [(ngModel)]="book.author" placeholder="Author"/>
-</div>
-<div>
 
-    <h3>Cover:</h3>
-    <input [(ngModel)]="book.cover" placeholder="Cover"/>
+    <div class="col-md-6 float-child indie-flower-regular">
+      <div>
+        <h3>Title:</h3>
+        <input [(ngModel)]="book.title" placeholder="Title" />
+      </div>
+      <div>
+        <h3>Author:</h3>
+        <input [(ngModel)]="book.author" placeholder="Author" />
+      </div>
+      <div>
+        
+        <h3>Cover:</h3>
+       <input type="file"  [(ngModel)]="book.cover" placeholder="Year" >
+      </div>
+      <div>
+        <h3>Year of publication: | Number of pages:</h3>
+
+        <p>
+          <input [(ngModel)]="book.year" placeholder="Year" />|<input
+            [(ngModel)]="book.pages"
+            placeholder="Pages"
+          />
+        </p>
+      </div>
+      <div>
+        <h3>Description:</h3>
+        <textarea
+          style="width: 600px"
+          [(ngModel)]="book.description"
+          placeholder="Description"
+        ></textarea>
+      </div>
+      <br />
+      <a routerLink="">
+        <button
+          type="button"
+          class="btn btn-light"
+          (click)="UpdateBook(book)"
+          *ngIf="book.id"
+        >
+          Save
+        </button>
+      </a>
+        &nbsp;
+        <a routerLink="">
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="DeleteBook(book)"
+          *ngIf="book.id"
+        >
+          Delete
+        </button>
+      </a>
+      <br />
+      <a routerLink="">
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="CreateBook(book)"
+          *ngIf="!book.id"
+        >
+          Create
+        </button>
+        </a> &nbsp;
+        <a routerLink="">
+          <button
+            type="button"
+            class="btn btn-danger"
+            *ngIf="!book.id"
+          >
+            Cancel
+          </button>
+      </a>
     </div>
-<div>
-<h3>Year of publication: | Number of pages:</h3>
-
-<p><input [(ngModel)]="book.year" placeholder="Year"/>|<input [(ngModel)]="book.pages" placeholder="Pages"/></p>
-</div>
-<div>
-<h3>Description: </h3>
-<input [(ngModel)]="book.description" placeholder="Description"/>
-</div>
-<button (click)="UpdateBook(book)" *ngIf="book.id"> Save</button> &nbsp;
-<button (click)="DeleteBook(book)" *ngIf="book.id"> Delete</button>
-<button (click)="CreateBook(book)" *ngIf="!book.id"> Create</button>
-
+  </div>
 </div>
